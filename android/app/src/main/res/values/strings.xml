@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Pontaj Calendar</string>
+    <string name="title_activity_main">Pontaj Calendar</string>
+    <string name="package_name">com.pontaj.calendar</string>
+    <string name="custom_url_scheme">com.pontaj.calendar</string>
+</resources>

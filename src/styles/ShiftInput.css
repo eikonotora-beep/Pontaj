@@ -1,0 +1,131 @@
+.shift-input {
+  background: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.shift-label {
+  display: block;
+  font-weight: 600;
+  color: #667eea;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+/* CO specific styling */
+.co-shift .shift-label {
+  color: #2b8a3e;
+}
+
+.co-shift .shift-inputs {
+  background: linear-gradient(90deg, rgba(43,138,62,0.04), rgba(102,126,234,0.02));
+  padding: 0.6rem;
+  border-radius: 6px;
+}
+
+.shift-inputs {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.time-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  flex: 1;
+  min-width: 100px;
+}
+
+.time-group label {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.time-input {
+  padding: 0.6rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: monospace;
+  background: white;
+}
+
+.time-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.duration {
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  min-width: 80px;
+  justify-content: center;
+}
+
+.duration-label {
+  font-weight: 600;
+  color: #333;
+  font-family: monospace;
+  font-size: 0.95rem;
+}
+
+.remove-btn {
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  width: 36px;
+  height: 36px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.remove-btn:hover {
+  background: #ff5252;
+  transform: scale(1.05);
+}
+
+.remove-btn:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+  .shift-input {
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .shift-inputs {
+    gap: 0.5rem;
+  }
+
+  .time-input {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .duration {
+    min-width: 70px;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .remove-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+}

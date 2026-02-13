@@ -1,0 +1,14 @@
+# Commands to push your project to GitHub
+# 1. Initialize git (if not already)
+git init
+# 2. Add all files
+git add .
+# 3. Commit your changes
+git commit -m "Initial commit for iOS cloud build"
+# 4. Add your GitHub remote (replace URL)
+git remote add origin https://github.com/eikonotora-beep/Pontaj.git
+# 5. Push to GitHub
+git branch -M main
+git push -u origin main
+
+# After pushing, go to GitHub → Actions tab → Run ios-cloud-build workflow.

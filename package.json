@@ -1,0 +1,68 @@
+{
+  "name": "pontaj-calendar",
+  "version": "1.0.0",
+  "description": "Cross-platform calendar app for tracking work hours with mobile and desktop support",
+  "main": "public/electron.js",
+  "homepage": "./",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron": "concurrently \"npm start\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron-dev": "concurrently \"npm start\" \"wait-on http://localhost:3000 && electron . --dev\"",
+    "electron-build": "npm run build && electron-builder",
+    "mobile": "capacitor open ios",
+    "mobile-android": "capacitor open android",
+    "build:web": "react-scripts build",
+    "sync-mobile": "npm run build:web && capacitor sync"
+  },
+  "dependencies": {
+    "date-fns": "^2.30.0",
+    "react": "^18.2.0",
+    "react-calendar": "^4.2.1",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.11.0"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^6.0.0",
+    "@capacitor/cli": "^6.0.0",
+    "@capacitor/core": "^6.0.0",
+    "@capacitor/ios": "^6.0.0",
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "concurrently": "^8.2.0",
+    "electron": "^27.0.0",
+    "electron-builder": "^24.6.0",
+    "electron-is-dev": "^3.0.1",
+    "react-scripts": "5.0.1",
+    "typescript": "^5.0.0",
+    "wait-on": "^7.0.1"
+  },
+  "build": {
+    "appId": "com.pontaj.calendar",
+    "productName": "Pontaj Calendar",
+    "files": [
+      "build/**/*",
+      "public/electron.js"
+    ],
+    "directories": {
+      "buildResources": "public"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
