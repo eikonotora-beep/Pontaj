@@ -32,6 +32,9 @@ jobs:
       - name: Add iOS platform (if needed)
         run: npx cap add ios || echo 'iOS already added'
 
+      - name: Build web assets
+        run: npm run build
+
       - name: Sync Capacitor
         run: npx cap sync ios
 
